@@ -1,0 +1,35 @@
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+  bottom: 0;
+  background-color: var(--black-121212);
+  font-size: 0.9rem;
+}
+
+.rights-name {
+  color: var(--orange-FD6F00);
+}
+
+.nav-above-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-footer-links a {
+  margin: 1rem;
+}
+
+.div-footer-links {
+  margin: 1rem 0;
+}
+
+.div-footer-contacts {
+  margin: 1rem 0;
+}
+
+.logo-footer {
+  width: 8rem;
+  height: 5rem;
+}

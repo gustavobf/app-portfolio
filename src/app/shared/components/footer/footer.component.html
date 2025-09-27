@@ -1,0 +1,23 @@
+<div>
+  <nav class="nav-above-footer">
+    <div class="div-footer-img">
+      <img src="images/logo.png" alt="Logo" class="logo-footer" />
+    </div>
+    <div class="div-footer-links">
+      <a (click)="scrollTo('home')">Home</a>
+      <a (click)="scrollTo('about')">About Me</a>
+      <a (click)="scrollTo('contact')">Contact</a>
+      <a (click)="scrollTo('services')">Services</a>
+      <a (click)="scrollTo('projects')">Projects</a>
+      <a (click)="scrollTo('testimonials')">Testimonials</a>
+    </div>
+    <div class="div-footer-contacts">
+      <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer"> <fa-icon [icon]="faLinkedin" size="2x" style="color: white"></fa-icon> </a>
+    </div>
+  </nav>
+</div>
+<footer>
+  <div>
+    <p>&copy; 2025 <span class="rights-name">Gustavo Figueiredo</span> All rights reserved , Inc</p>
+  </div>
+</footer>

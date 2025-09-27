@@ -1,0 +1,143 @@
+#home, #about {
+  display: flex;
+}
+
+#home {
+  margin-top: 8rem;
+}
+
+#about {
+  justify-content: center;
+}
+
+#about>div {
+  padding: 0 3rem;
+}
+
+.presentation {
+  justify-content: space-between;
+  padding-right: 7rem;
+}
+
+.presentation-start, .presentation-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 1rem 0;
+}
+
+.presentation-name {
+  color: var(--orange-FD6F00);
+  font-size: 2rem;
+}
+
+.presentation-lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation-lines {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+.presentation-first-line {
+  align-self: flex-start;
+}
+
+.presentation-second-line {
+  align-self: flex-end;
+  margin-left: 7rem;
+}
+
+.div-presentation-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-img {
+  width: 25rem;
+  height: 30rem;
+}
+
+.presentation-img-about-me {
+  width: 31rem;
+  height: 30rem;
+}
+
+.presentation-text {
+  text-align: justify;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.div-presentation-contacts {
+  margin: 2rem;
+}
+
+.about-me {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.presentation-img-skills {
+  width: 90%;
+  height: 15rem;
+  margin-top: 2rem;
+}
+
+.div-contact-me {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.div-contact-me input, .div-contact-me button {
+  margin: 0 0.5rem;
+}
+
+.input-email {
+  width: 20rem;
+  height: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 100;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: var(-black-100);
+}
+
+.btn-email-contact-me {
+  padding: 0.5rem;
+  background-color: var(--orange-FD6F00);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#contact button:hover {
+  opacity: 0.9;
+}
+
+section,
+.reveal-element {
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.revealed {
+  opacity: 1;
+}

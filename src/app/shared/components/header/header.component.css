@@ -1,0 +1,39 @@
+header nav a.active,
+header nav a.router-link-active {
+  border-bottom: 2px solid var(--orange-FD6F00);
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin: 0.9rem;
+}
+
+nav div {
+  margin: 0 2rem;
+}
+
+.download-cv {
+  background-color: var(--orange-FD6F00);
+  border-radius: 5px;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+}
+
+.div-header-routes {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.div-header-routes a{
+  margin: 1rem;
+}
+
+.logo-header {
+  width: 10rem;
+  height: 6rem;
+}

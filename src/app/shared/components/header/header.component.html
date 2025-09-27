@@ -1,0 +1,16 @@
+<header class="container">
+  <nav>
+    <div class="div-header-img">
+      <img src="images/logo.png" alt="Logo" class="logo-header" />
+    </div>
+    <div class="div-header-routes">
+      <a (click)="scrollTo('home')">Home</a>
+      <a (click)="scrollTo('about')">About Me</a>
+      <a (click)="scrollTo('contact')">Contact</a>
+      <a (click)="scrollTo('services')">Services</a>
+      <a (click)="scrollTo('projects')">Projects</a>
+      <a (click)="scrollTo('testimonials')">Testimonials</a>
+      <a routerLinkActive="active" class="download-cv">Download CV</a>
+    </div>
+  </nav>
+</header>

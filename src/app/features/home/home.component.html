@@ -1,0 +1,72 @@
+<div class="container">
+  <section id="home" appReveal>
+    <div class="presentation">
+      <p class="presentation-start">Hi I am</p>
+      <p class="presentation-name">Gustavo Figueiredo</p>
+      <div class="presentation-lines">
+        <p class="presentation-first-line">Software</p>
+        <p class="presentation-second-line">Developer</p>
+      </div>
+      <p class="presentation-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis, libero nec cursus
+        mattis, erat nisl blandit urna, a congue nisl nisl ut nulla. Nulla facilisi. Phasellus
+        sagittis ligula sit amet lorem tincidunt, vel pharetra metus efficitur.
+      </p>
+    </div>
+    <div class="div-presentation-img">
+      <img src="images/presentation-img.png" alt="Logo" class="presentation-img" />
+      <div class="div-presentation-contacts">
+        <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="faLinkedin" size="2x" style="color: white"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <br />
+  <br />
+  <br />
+
+  <section id="about" appReveal>
+    <div>
+      <img
+        src="images/presentation-img-about-me.png"
+        alt="Logo"
+        class="presentation-img-about-me"
+      />
+    </div>
+    <div>
+      <p class="about-me">About me</p>
+      <p class="presentation-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis, libero nec cursus
+        mattis, erat nisl blandit urna, a congue nisl nisl ut nulla. Nulla facilisi. Phasellus
+        sagittis ligula sit amet lorem tincidunt, vel pharetra metus efficitur.
+      </p>
+      <div>
+        <img src="images/Group-10.png" alt="Logo" class="presentation-img-skills" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" appReveal>
+    <div class="div-contact-me">
+      <div class="div-contact-me-presentation">
+        <h1>Let's Get in Touch</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="div-contact-inputs">
+        <input
+          class="input-email"
+          type="email"
+          placeholder="Enter Your Email"
+          [(ngModel)]="userEmail"
+          required
+        />
+        <button class="btn-email-contact-me" (click)="sendEmail()">Contact Me</button>
+      </div>
+    </div>
+  </section>
+</div>
