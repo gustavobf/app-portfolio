@@ -1,10 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const { writeFileSync } = require('fs');
 
-const envProdPath = path.join(__dirname, '../src/environments/environment.prod.ts');
-let fileContent = fs.readFileSync(envProdPath, 'utf8');
+const targetPath = './src/environments/environment.prod.ts';
 
-const linkedinUrl = process.env.LINKEDIN_URL || '';
-fileContent = fileContent.replace('__LINKEDIN_URL__', linkedinUrl);
+const envConfigFile = `
+export const environment = {
+  production: true,
+  linkedinUrl: '${process.env.LINKEDIN_URL}',
+  myEmail: '${process.env.MY_EMAIL}'
+};
+`;
 
-fs.writeFileSync(envProdPath, fileContent);
+writeFileSync(targetPath, envConfigFile, { encoding: 'utf-8' });
