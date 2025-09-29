@@ -1,99 +1,201 @@
-#home, #about {
+#home, #about, .skills-wrapper {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #home {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 #about {
-  justify-content: center;
+  margin: 8rem 0;
 }
 
-#about>div {
-  padding: 0 3rem;
-}
-
-.presentation {
+.home-presentation {
   justify-content: space-between;
-  padding-right: 7rem;
+  flex: 1;
 }
 
-.presentation-start, .presentation-name {
-  font-family: "Poppins", sans-serif;
+.home-intro {
   font-weight: 500;
-  font-style: normal;
-  margin: 1rem 0;
+  letter-spacing: 0.05rem;
 }
 
-.presentation-name {
+.home-name {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
   color: var(--orange-FD6F00);
   font-size: 2rem;
 }
 
-.presentation-lines {
+.home-title {
   display: flex;
   flex-direction: column;
-}
-
-.presentation-lines {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 5rem;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.presentation-first-line {
+.home-title-line-1 {
   align-self: flex-start;
 }
 
-.presentation-second-line {
+.home-title-line-2 {
   align-self: flex-end;
-  margin-left: 7rem;
 }
 
-.div-presentation-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.presentation-img {
-  width: 25rem;
-  height: 30rem;
-}
-
-.presentation-img-about-me {
-  width: 31rem;
-  height: 30rem;
-}
-
-.presentation-text {
+.home-description {
   text-align: justify;
   margin-right: 2rem;
   margin-top: 2rem;
   line-height: 1.5;
 }
 
-.div-presentation-contacts {
+@media (min-width: 1750px) {
+  .home-description, .home-title {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .home-description, .home-title {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 3600px) {
+  .home-description, .home-title {
+    max-width: 40%;
+  }
+}
+
+.home-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.home-image {
+  width: 25rem;
+  height: 30rem;
+}
+
+.home-socials {
   margin: 2rem;
 }
 
-.about-me {
-  font-family: "Poppins", sans-serif;
+.about-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-image-wrapper {
+  flex: 1;
+  width: 50%;
+}
+
+.about-image {
+  width: 31rem;
+  height: 30rem;
+}
+
+.about-title {
   font-weight: 400;
-  font-style: normal;
   font-size: 4rem;
 }
 
-.presentation-img-skills {
-  width: 90%;
-  height: 15rem;
+.about-description {
+  text-align: justify;
+  margin-right: 2rem;
   margin-top: 2rem;
+  line-height: 1.5;
 }
 
-.div-contact-me {
+.about-certifications-list {
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skills-wrapper {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--orange-FD6F00);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.skills-title:hover::after {
+  transform: scaleX(1);
+}
+
+.skills-list {
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills-list li,
+.about-certifications-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list li {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+
+.skills-list li::before, .about-certifications-list li::before {
+  content: "•";
+  color: var(--orange-FD6F00);
+  font-weight: bold;
+  margin: 0 0.09rem;
+}
+
+.skills-list-wrapper, .skills-certifications-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -102,30 +204,46 @@
   text-align: center;
 }
 
-.div-contact-me input, .div-contact-me button {
-  margin: 0 0.5rem;
+.contact-header-title {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.input-email {
-  width: 20rem;
-  height: 1.5rem;
+.contact-header-description {
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+
+.contact-form {
+  display: flex;
+  margin: 2rem;
+  height: 3rem;
+  align-items: stretch;
+}
+
+.contact-input {
   font-size: 0.9rem;
-  font-weight: 100;
-  padding: 0.5rem;
-  border-radius: 8px;
-  color: var(-black-100);
+  font-weight: 400;
+  color: var(--black-100);
+  margin: 0 0.5rem;
+  border-radius: 9px;
+  padding: 1rem;
+  width: 25rem;
 }
 
-.btn-email-contact-me {
-  padding: 0.5rem;
+.contact-button {
   background-color: var(--orange-FD6F00);
   color: white;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   white-space: nowrap;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  border-radius: 9px;
+  padding: 0 1.5rem;
+  letter-spacing: 0.05rem;
 }
 
 #contact button:hover {

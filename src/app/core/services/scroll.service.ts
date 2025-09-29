@@ -8,7 +8,12 @@ export class ScrollService {
         if (!element) return;
 
         const start = window.scrollY;
-        const end = element.offsetTop;
+
+        const elementHeight = element.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        const end = element.offsetTop - (viewportHeight / 2) + (elementHeight / 2);
+
         const distance = end - start;
         let startTime: number | null = null;
 

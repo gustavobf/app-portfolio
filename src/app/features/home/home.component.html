@@ -1,71 +1,97 @@
 <div class="container">
   <section id="home" appReveal>
-    <div class="presentation">
-      <p class="presentation-start">Hi I am</p>
-      <p class="presentation-name">Gustavo Figueiredo</p>
-      <div class="presentation-lines">
-        <p class="presentation-first-line">Software</p>
-        <p class="presentation-second-line">Developer</p>
+    <div class="home-presentation">
+      <p class="home-intro">Hi, I am</p>
+      <p class="home-name">Gustavo Figueiredo</p>
+      <div class="home-title"> 
+        <p class="home-title-line-1">Software</p>
+        <p class="home-title-line-2">Engineer</p>
       </div>
-      <p class="presentation-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis, libero nec cursus
-        mattis, erat nisl blandit urna, a congue nisl nisl ut nulla. Nulla facilisi. Phasellus
-        sagittis ligula sit amet lorem tincidunt, vel pharetra metus efficitur.
+      <p class="home-description">
+        Java Software Engineer currently pursuing a degree in Information Systems, focused on
+        developing robust, scalable, and high-performance software solutions. Experienced in both
+        monolithic and microservices architectures, applying object-oriented programming principles
+        to build organized, reusable, and maintainable systems.
       </p>
     </div>
-    <div class="div-presentation-img">
-      <img src="images/presentation-img.png" alt="Logo" class="presentation-img" />
-      <div class="div-presentation-contacts">
+    <div class="home-image-wrapper">
+      <img src="images/presentation-img.png" alt="Logo" class="home-image" />
+      <div class="home-socials">
         <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">
           <fa-icon [icon]="faLinkedin" size="2x" style="color: white"></fa-icon>
         </a>
       </div>
     </div>
   </section>
-
-  <br />
-  <br />
-  <br />
-
   <section id="about" appReveal>
-    <div>
-      <img
-        src="images/presentation-img-about-me.png"
-        alt="Logo"
-        class="presentation-img-about-me"
-      />
+    <div class="about-image-wrapper">
+      <img src="images/presentation-img-about-me.png" alt="Logo" class="about-image" />
     </div>
-    <div>
-      <p class="about-me">About me</p>
-      <p class="presentation-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis, libero nec cursus
-        mattis, erat nisl blandit urna, a congue nisl nisl ut nulla. Nulla facilisi. Phasellus
-        sagittis ligula sit amet lorem tincidunt, vel pharetra metus efficitur.
-      </p>
-      <div>
-        <img src="images/Group-10.png" alt="Logo" class="presentation-img-skills" />
+    <div class="about-content">
+      <div class="about-content-wrapper">
+        <p class="about-title">About me</p>
+        <p class="about-description">
+          I have contributed to internal projects within a consolidated product, focusing on
+          building new features, driving technical enhancements, and improving performance. I take a
+          collaborative approach to development and consistently align with industry best practices
+          in software engineering.
+        </p>
+        <p class="about-description">
+          Comfortable working with cloud-native technologies and DevOps workflows, I have hands-on
+          experience with CI/CD pipelines, container orchestration, and automation tools that
+          streamline the software development lifecycle.
+        </p>
+        <p class="about-description">
+          Driven by a commitment to technical excellence and impactful delivery, I am always
+          evolving my skill set to meet complex challenges and play an active role in the success of
+          products and teams.
+        </p>
       </div>
     </div>
   </section>
-
+  <section id="skills" appReveal>
+    <div class="skills-wrapper">
+      <div class="skills-list-wrapper">
+        <p class="skills-title">Skill Highlights</p>
+        <ul class="skills-list">
+          <li>Java Development</li>
+          <li>DevOps</li>
+          <li>Kubernetes</li>
+          <li>Optimization</li>
+          <li>API Design</li>
+          <li>Quarkus</li>
+          <li>Performance and Scalability</li>
+          <li>Azure DevOps</li>
+        </ul>
+      </div>
+      <div class="skills-certifications-wrapper">
+        <p class="skills-title">Licenses and Certifications</p>
+        <ul class="about-certifications-list">
+          <li>AWS Certified Cloud Practitioner (AWS)</li>
+          <li>Microsoft Certified: Azure Fundamentals (Microsoft)</li>
+          <li>Oracle Cloud Infrastructure Foundations 2021 Certified Associate (Oracle)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <section id="contact" appReveal>
-    <div class="div-contact-me">
-      <div class="div-contact-me-presentation">
-        <h1>Let's Get in Touch</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.
+    <div class="contact">
+      <div class="contact-header">
+        <h1 class="contact-header-title">Let’s Connect</h1>
+        <p class="contact-header-description">
+          I am always happy to hear from others and welcome any questions, ideas, or feedback. Feel
+          free to send me a message, and I will get back to you as soon as possible.
         </p>
       </div>
-      <div class="div-contact-inputs">
+      <div class="contact-form">
         <input
-          class="input-email"
+          class="contact-input"
           type="email"
           placeholder="Enter Your Email"
           [(ngModel)]="userEmail"
           required
         />
-        <button class="btn-email-contact-me" (click)="sendEmail()">Contact Me</button>
+        <button class="contact-button" (click)="sendEmail()">Contact Me</button>
       </div>
     </div>
   </section>

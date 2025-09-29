@@ -14,6 +14,7 @@ import { environment } from '../../../../environments/environment.prod';
 export class FooterComponent {
   faLinkedin = faLinkedin;
   linkedinUrl = environment.linkedinUrl;
+  currentYear: number = new Date().getFullYear();
 
   constructor(private scrollService: ScrollService) { }
 

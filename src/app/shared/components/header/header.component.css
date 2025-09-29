@@ -8,18 +8,15 @@ nav {
   text-align: center;
   justify-content: space-between;
   font-size: 0.9rem;
-  margin: 0.9rem;
-}
-
-nav div {
-  margin: 0 2rem;
+  letter-spacing: 0.05rem;
 }
 
 .download-cv {
   background-color: var(--orange-FD6F00);
-  border-radius: 5px;
+  border-radius: 4px;
   white-space: nowrap;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 0.8rem;
+  font-weight: 400;
 }
 
 .div-header-routes {
