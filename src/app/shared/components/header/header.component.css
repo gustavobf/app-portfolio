@@ -26,11 +26,18 @@ nav {
   align-items: center;
 }
 
-.div-header-routes a{
+.div-header-routes a {
   margin: 1rem;
 }
 
 .logo-header {
   width: 10rem;
   height: 6rem;
+}
+
+@media (max-width: 480px) {
+  nav, .div-header-routes {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }

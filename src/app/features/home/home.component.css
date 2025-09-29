@@ -38,6 +38,7 @@
   margin: 0;
   justify-content: flex-start;
   align-items: flex-start;
+  line-height: 0.9;
 }
 
 .home-title-line-1 {
@@ -53,24 +54,6 @@
   margin-right: 2rem;
   margin-top: 2rem;
   line-height: 1.5;
-}
-
-@media (min-width: 1750px) {
-  .home-description, .home-title {
-    max-width: 70%;
-  }
-}
-
-@media (min-width: 2560px) {
-  .home-description, .home-title {
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 3600px) {
-  .home-description, .home-title {
-    max-width: 40%;
-  }
 }
 
 .home-image-wrapper {
@@ -102,7 +85,6 @@
 
 .about-image-wrapper {
   flex: 1;
-  width: 50%;
 }
 
 .about-image {
@@ -183,14 +165,16 @@
   box-sizing: border-box;
 }
 
-.skills-list li::before, .about-certifications-list li::before {
+.skills-list li::before,
+.about-certifications-list li::before {
   content: "•";
   color: var(--orange-FD6F00);
   font-weight: bold;
   margin: 0 0.09rem;
 }
 
-.skills-list-wrapper, .skills-certifications-wrapper {
+.skills-list-wrapper,
+.skills-certifications-wrapper {
   flex: 1;
   text-align: center;
 }
@@ -258,4 +242,113 @@ section,
 
 .revealed {
   opacity: 1;
+}
+
+@media (min-width: 1750px) {
+  .home-description,
+  .home-title {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .home-description,
+  .home-title {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 3600px) {
+  .home-description,
+  .home-title {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image-wrapper,
+  .home-image-wrapper {
+    display: none;
+  }
+
+  .skills-wrapper,
+  .contact-form {
+    flex-wrap: wrap;
+  }
+
+  .contact-header-title {
+    line-height: 1;
+  }
+
+  .contact-input {
+    height: 9%;
+  }
+
+  .contact-form {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-button {
+    margin-top: 2%;
+    padding: 0.4rem 1rem;
+  }
+
+  .skills-title {
+    white-space: unset;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .home-title {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  .home-name {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .home-description {
+    text-align: justify;
+    margin: 2rem 0;
+    line-height: 1.5;
+  }
+
+  #about {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .about-description {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-weight: 400;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-image-wrapper,
+  .home-image-wrapper {
+    display: none;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #about {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
 }
